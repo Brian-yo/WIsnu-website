@@ -817,6 +817,71 @@ body {
     height: 300px;
   }
 }
+
+/* Container agar tabel bisa di-scroll di layar kecil */
+.datasheet-container {
+  margin: 20px auto;
+  max-width: 1000px;
+  overflow-x: auto; /* Penting untuk responsif di HP */
+  font-family: sans-serif;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+}
+
+.content-table {
+  border-collapse: collapse;
+  margin: 0;
+  font-size: 0.9em;
+  min-width: 100%;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+}
+
+/* Header Tabel */
+.content-table thead tr {
+  background-color: #009879; /* Bisa diganti sesuai tema warnamu */
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
+}
+
+/* Body Tabel */
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+/* Efek Zebra (Warna selang-seling) */
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+/* Efek Hover saat mouse lewat */
+.content-table tbody tr:hover {
+  background-color: #f1f1f1;
+  font-weight: bold;
+  color: #009879;
+}
+
+/* Garis bawah tebal di akhir tabel */
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+/* Styling untuk Status Badge */
+.status {
+  padding: 5px 10px;
+  border-radius: 20px;
+  color: white;
+  font-size: 12px;
+}
+.status.active { background-color: #28a745; } /* Hijau */
+.status.pending { background-color: #ffc107; color: #333; } /* Kuning */
+
 /* =========================================
    10. CONTACT SECTION
    ========================================= */
@@ -1170,3 +1235,4 @@ iframe {
     }
   }
 }
+
