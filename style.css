@@ -366,7 +366,7 @@ body {
    ========================================= */
 .marquee-separator {
   background: #050505;
-  padding: 25px 0;
+  padding: 50px 0;
   overflow: hidden;
   white-space: nowrap;
   position: relative;
@@ -1083,6 +1083,7 @@ iframe {
 }
   }
 }
+
 
 
 
