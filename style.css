@@ -658,72 +658,57 @@ body {
 /* =========================================
    9. DATASHEET (CYBER TECH STYLE)
    ========================================= */
+/* =========================================
+   9. DATASHEET STYLE (Dark Mode)
+   ========================================= */
+
+/* Container Utama - Biar responsif di HP */
 .datasheet-container {
-    margin: 50px auto;
-    max-width: 1000px;
+    margin: 40px auto;
     width: 90%;
-    overflow-x: auto; /* Agar bisa discroll di HP */
-    background: #0a0a0a;
-    border: 1px solid #333;
+    max-width: 1000px;
+    background: #111; /* Latar belakang gelap */
+    border: 1px solid #333; /* Border tipis */
     border-radius: 10px;
     padding: 20px;
-    position: relative;
-    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    overflow-x: auto; /* Wajib: Biar tabel bisa digeser di HP */
 }
 
-/* Hiasan Header */
-.datasheet-header h2 {
-    font-family: 'Courier New', monospace; /* Font coding */
-    font-size: 1.2rem;
+/* Judul Tabel */
+.datasheet-container h2 {
+    font-size: 1.5rem;
     color: #fff;
-    margin-bottom: 10px;
-    letter-spacing: 2px;
-}
-
-.decorative-line {
-    width: 100%;
-    height: 1px;
-    background: linear-gradient(90deg, #fff, transparent);
     margin-bottom: 20px;
+    font-weight: 700;
+    border-left: 5px solid #fff; /* Aksen garis putih di kiri */
+    padding-left: 15px;
 }
 
-/* Tabel Utama */
+/* Tabelnya */
 .content-table {
     width: 100%;
     border-collapse: collapse;
-    font-family: 'Courier New', monospace;
-    font-size: 0.9rem;
-    color: #ccc;
-    min-width: 600px; /* Memastikan tabel tidak gepeng di HP */
+    min-width: 600px; /* Supaya tabel tidak gepeng di layar kecil */
+    font-size: 0.95rem;
 }
 
-/* Header Kolom */
+/* Bagian Kepala Tabel (Header) */
 .content-table thead tr {
-    background-color: #111;
+    background-color: #222;
     color: #fff;
     text-align: left;
-    border-bottom: 2px solid #444;
-}
-
-.content-table th {
-    padding: 15px;
     font-weight: bold;
-    letter-spacing: 1px;
 }
 
-/* Baris Data */
+.content-table th, 
 .content-table td {
-    padding: 15px;
-    border-bottom: 1px solid #222;
+    padding: 15px 20px;
+    border-bottom: 1px solid #333; /* Garis antar baris */
+    color: #ddd;
 }
 
-/* Kolom ID (Warna beda dikit) */
-.id-col {
-    color: #666;
-    font-weight: bold;
-}
-
-/* Efek Hover Baris */
+/* Efek saat mouse diarahkan ke baris (Hover) */
 .content-table tbody tr {
     transition: 0.3s;
 }
@@ -733,52 +718,9 @@ body {
     color: #fff;
 }
 
-.content-table tbody tr:hover .id-col {
-    color: #fff; /* ID jadi putih saat hover */
-}
-
-/* STATUS BADGES (Neon Style) */
-.status {
-    padding: 5px 10px;
-    border-radius: 4px;
-    font-size: 0.75rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    display: inline-block;
-}
-
-/* Warna Status */
-.status.completed {
-    border: 1px solid #28a745;
-    color: #28a745;
-    background: rgba(40, 167, 69, 0.1);
-    box-shadow: 0 0 5px rgba(40, 167, 69, 0.2); /* Glow Hijau */
-}
-
-.status.progress {
-    border: 1px solid #007bff;
-    color: #007bff;
-    background: rgba(0, 123, 255, 0.1);
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2); /* Glow Biru */
-}
-
-.status.pending {
-    border: 1px solid #ffc107;
-    color: #ffc107;
-    background: rgba(255, 193, 7, 0.1);
-}
-
-/* Scrollbar Kustom untuk Tabel (Webkit only) */
-.datasheet-container::-webkit-scrollbar {
-    height: 8px;
-}
-.datasheet-container::-webkit-scrollbar-track {
-    background: #111;
-}
-.datasheet-container::-webkit-scrollbar-thumb {
-    background: #444;
-    border-radius: 4px;
+/* Garis paling bawah */
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #fff; /* Garis penutup tebal putih */
 }
 /* =========================================
    10. CONTACT SECTION
@@ -1141,6 +1083,7 @@ iframe {
 }
   }
 }
+
 
 
 
