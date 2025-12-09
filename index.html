@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brianda Wisnu Yusena | Digital Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="windCanvas"></canvas>
+    <div class="preloader">
+      <div class="loader-text">LOADING...</div>
+    </div>
+
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <nav class="navbar floating-nav">
+      <div class="logo hover-target">PORTFOLIO.</div>
+      <ul class="nav-links">
+        <li><a href="#home" class="hover-target">Home</a></li>
+        <li><a href="#about" class="hover-target">About</a></li>
+        <li><a href="#projects" class="hover-target">Works</a></li>
+        <li><a href="#blog" class="hover-target">Blog</a></li>
+        <li><a href="#contact" class="hover-target">Contact</a></li>
+        <li><a href="#playground" class="hover-target">Game</a></li>
+      </ul>
+      <div class="hamburger hover-target">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+
+    <section id="home" class="diagonal-hero">
+      <div class="hero-container centered-hero">
+        <div class="hero-content-layer reveal">
+          <h1 class="massive-title">
+            Digital <br />
+            Impact.
+          </h1>
+
+          <p class="hero-subtitle">
+            Membangun identitas digital yang kuat melalui desain fungsional dan
+            estetika yang berani. Saya berfokus pada pengembangan Web Modern,
+            Rekayasa Perangkat Lunak, dan Inovasi IoT.
+          </p>
+
+          <a href="#projects" class="cta-btn hover-target">LIHAT KARYA</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about-section">
+      <div class="about-container">
+        <div class="about-header reveal">
+          <span class="section-tag">01 // THE DEVELOPER</span>
+          <h2 class="massive-title small">Behind The <br />Code.</h2>
+        </div>
+
+        <div class="about-content-grid">
+          <div class="about-visual reveal delay-100">
+            <div class="image-frame parallax" data-speed="0.5">
+              <img
+                src="c:\Users\LAB_RPL\Downloads\WhatsApp_Image_2025-11-13_at_20.17.50-removebg-preview.png"
+                alt="Profile"
+                class="about-img"
+              />
+            </div>
+            <div class="experience-badge">
+              <span class="years">11</span>
+              <span class="text">RPL <br />STUDENT</span>
+            </div>
+          </div>
+
+          <div class="about-text reveal delay-200">
+            <p class="highlight-text">
+              Halo, Saya <span class="hover-target">Brianda Wisnu Yusena</span>.
+              Siswa RPL yang berfokus pada pengembangan web modern dan rekayasa
+              perangkat lunak.
+            </p>
+            <p class="body-text">
+              Saya menggabungkan logika pemrograman dengan estetika desain untuk
+              menciptakan pengalaman digital yang tidak hanya berfungsi dengan
+              baik, tetapi juga terlihat memukau. Tertarik pada dunia IoT, Web
+              Development, dan Creative Coding.
+            </p>
+
+            <div class="tech-bars">
+              <div class="bar-item">
+                <div class="bar-info">
+                  <span>HTML & CSS</span>
+                  <span>90%</span>
+                </div>
+                <div class="progress-line">
+                  <span style="width: 90%"></span>
+                </div>
+              </div>
+              <div class="bar-item">
+                <div class="bar-info">
+                  <span>JavaScript</span>
+                  <span>75%</span>
+                </div>
+                <div class="progress-line">
+                  <span style="width: 75%"></span>
+                </div>
+              </div>
+              <div class="bar-item">
+                <div class="bar-info">
+                  <span>Java / OOP</span>
+                  <span>80%</span>
+                </div>
+                <div class="progress-line">
+                  <span style="width: 80%"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee-separator">
+      <div class="marquee-content">
+        <span class="marquee-item">Selected Works</span>
+        <span class="marquee-item">Creative Portfolio</span>
+        <span class="marquee-item">Design & Development</span>
+        <span class="marquee-item">2025 Collection</span>
+        <span class="marquee-item">Selected Works</span>
+        <span class="marquee-item">Creative Portfolio</span>
+        <span class="marquee-item">Design & Development</span>
+        <span class="marquee-item">2025 Collection</span>
+      </div>
+    </div>
+
+    <section id="projects" class="horizontal-works">
+      <h2 class="section-vert-title reveal">Selected Works</h2>
+
+      <div class="works-wrapper">
+        <div class="slider-nav">
+          <button id="slideBack" class="nav-btn hover-target">←</button>
+          <button id="slideNext" class="nav-btn hover-target">→</button>
+        </div>
+
+        <div class="horizontal-scroll-container">
+          <div class="project-item reveal delay-100 hover-target">
+            <div class="project-image-wrapper">
+              <img
+                src="c:\Users\LAB_RPL\Pictures\Screenshots\Screenshot (9).png"
+                alt="Web Portfolio"
+                class="project-img"
+              />
+              <div class="project-overlay">
+                <div class="project-header">
+                  <span class="p-year">2025</span>
+                  <span class="p-type">Personal Branding</span>
+                </div>
+                <h3>Web Portfolio</h3>
+                <p class="project-desc">
+                  Platform portofolio interaktif yang dirancang untuk memamerkan
+                  karya digital dengan fokus pada User Experience (UX) dan
+                  animasi mikro yang responsif.
+                </p>
+                <div class="project-tech-stack">
+                  <span>HTML5</span>
+                  <span>CSS3</span>
+                  <span>JavaScript</span>
+                  <span>UI Design</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-item reveal delay-200 hover-target">
+            <div class="project-image-wrapper">
+              <img
+                src="c:\Users\LAB_RPL\Downloads\images\pkk6.jpeg"
+                alt="Robot Avoider"
+                class="project-img"
+              />
+              <div class="project-overlay">
+                <div class="project-header">
+                  <span class="p-year">2024</span>
+                  <span class="p-type">Robotic System</span>
+                </div>
+                <h3>Robot Avoider</h3>
+                <p class="project-desc">
+                  Prototipe robot otonom yang mampu mendeteksi dan menghindari
+                  rintangan secara real-time menggunakan sensor ultrasonik untuk
+                  navigasi ruang sempit.
+                </p>
+                <div class="project-tech-stack">
+                  <span>Arduino Uno</span>
+                  <span>C++</span>
+                  <span>Ultrasonic Sensor</span>
+                  <span>Motor Driver</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-item reveal delay-300 hover-target">
+            <div class="project-image-wrapper">
+              <img
+                src="c:\Users\LAB_RPL\Downloads\images\pkkl6.jpeg"
+                alt="Internet of Things"
+                class="project-img"
+              />
+              <div class="project-overlay">
+                <div class="project-header">
+                  <span class="p-year">2025</span>
+                  <span class="p-type">Smart System</span>
+                </div>
+                <h3>Internet of Things</h3>
+                <p class="project-desc">
+                  Sistem monitoring lingkungan berbasis IoT yang terintegrasi
+                  dengan dashboard seluler untuk pemantauan suhu dan kelembaban
+                  jarak jauh.
+                </p>
+                <div class="project-tech-stack">
+                  <span>ESP8266</span>
+                  <span>Blynk App</span>
+                  <span>C++</span>
+                  <span>DHT11</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-item reveal delay-400 hover-target">
+            <div class="project-image-wrapper">
+              <img
+                src="c:\Users\LAB_RPL\Downloads\OIP.webp"
+                alt="Measurement"
+                class="project-img"
+              />
+              <div class="project-overlay">
+                <div class="project-header">
+                  <span class="p-year">2025</span>
+                  <span class="p-type">Measurement</span>
+                </div>
+                <h3>Pengukur Jarak</h3>
+                <p class="project-desc">
+                  Sistem pengukur jarak sederhana berbasis arduino uno yang
+                  diintegrasikan dengan sensor ultrasonik untuk mengukur jarak
+                  secara akurat.
+                </p>
+                <div class="project-tech-stack">
+                  <span>Arduino Uno</span>
+                  <span>Arduino IDE</span>
+                  <span>C++</span>
+                  <span>HCSR04</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="blog" class="blog-section">
+      <div class="blog-container">
+        <div class="blog-header reveal">
+          <h2 class="section-vert-title right-side">Latest Logs</h2>
+        </div>
+
+        <div class="blog-grid">
+          <article class="blog-card reveal delay-100 hover-target">
+            <div class="blog-meta">
+              <span class="date">08 Des 2025</span>
+              <span class="cat">TUTORIAL</span>
+            </div>
+            <h3 class="blog-title">Membuat SmartHome System</h3>
+            <p class="blog-excerpt">
+              Panduan langkah demi langkah membangun identitas digital
+              menggunakan semantic C++ dan Arduino.
+            </p>
+            <a
+              href="https://www.bernas.id/2025/04/225843/cara-membuat-smart-home-dengan-arduino-uno/"
+              class="read-more"
+              >BACA ARTIKEL -></a
+            >
+          </article>
+
+          <article class="blog-card reveal delay-200 hover-target">
+            <div class="blog-meta">
+              <span class="date">01 Des 2025</span>
+              <span class="cat">IOT PROJECT</span>
+            </div>
+            <h3 class="blog-title">Integrasi ESP8266 dengan Blynk App</h3>
+            <p class="blog-excerpt">
+              Cara mudah menghubungkan mikrokontroler dengan dashboard
+              smartphone untuk monitoring suhu real-time.
+            </p>
+            <a
+              href="https://www.arduino.biz.id/2025/02/mengoptimalkan-esp8266-untuk-cloud-iot-panduan-integrasi-dengan-blynk-firebase-dan-mqtt_02096344373.html"
+              class="read-more"
+              >BACA ARTIKEL -></a
+            >
+          </article>
+
+          <article class="blog-card reveal delay-300 hover-target">
+            <div class="blog-meta">
+              <span class="date">28 Nov 2025</span>
+              <span class="cat">OPINI</span>
+            </div>
+            <h3 class="blog-title">
+              Masa Depan Web Development dikala Semakin Canggihnya AI
+            </h3>
+            <p class="blog-excerpt">
+              Analisis tren teknologi web, mulai dari WebAssembly hingga
+              penggunaan AI dalam coding sehari-hari dan Dampak yang diberikan
+              AI.
+            </p>
+            <a
+              href="https://www.linkedin.com/pulse/future-web-development-how-ai-revolutionizing-software-2025-5xvoc"
+              class="read-more"
+              >BACA ARTIKEL -></a
+            >
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="playground" class="game-section">
+      <h2 class="section-vert-title reveal">PLAYGROUND</h2>
+
+      <div class="game-container">
+        <div class="game-header-box reveal">
+          <h2>Mini Games.</h2>
+          <p>
+            Eksperimen logika pemrograman dan interaktivitas sederhana
+            menggunakan JavaScript murni.
+          </p>
+        </div>
+
+        <div class="game-grid">
+          <div class="game-card reveal delay-100">
+            <div class="iframe-wrapper">
+              <iframe
+                src="file:///D:/XI%20RPL/Games/game.html"
+                class="game-iframe"
+                title="Snake Game"
+              ></iframe>
+            </div>
+
+            <div class="game-info">
+              <h3 class="game-title">Classic Snake</h3>
+              <div class="game-tags">
+                <span>JS Logic</span>
+                <span>Canvas</span>
+              </div>
+            </div>
+
+            <button
+              class="play-btn"
+              onclick="window.open('game.html', '_blank')"
+            >
+              Full Screen Mode
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="diagonal-contact">
+      <div class="contact-container-layer reveal">
+        <div class="contact-header">
+          <h2 class="massive-title small">
+            Let's <br />
+            Collaborate.
+          </h2>
+          <div class="contact-details-box">
+            <p>Available for freelance.</p>
+            <p class="email-link hover-target">briandawisnu45@gmail.com</p>
+            <p>Lumajang, ID</p>
+          </div>
+        </div>
+        <form class="modern-form">
+          <div class="form-group floating-label">
+            <input
+              type="text"
+              id="nama"
+              required
+              placeholder=" "
+              class="hover-target"
+            />
+            <label for="nama">Nama Lengkap</label>
+          </div>
+          <div class="form-group floating-label">
+            <input
+              type="email"
+              id="email"
+              required
+              placeholder=" "
+              class="hover-target"
+            />
+            <label for="email">Alamat Email</label>
+          </div>
+          <div class="form-group floating-label">
+            <textarea
+              id="pesan"
+              rows="4"
+              required
+              placeholder=" "
+              class="hover-target"
+            ></textarea>
+            <label for="pesan">Ceritakan proyek Anda</label>
+          </div>
+          <button
+            type="button"
+            class="btn-glitch hover-target"
+            onclick="alert('Pesan Terkirim!')"
+          >
+            KIRIM PESAN ->
+          </button>
+        </form>
+      </div>
+
+      <div class="tech-window reveal delay-300">
+        <div class="window-header">
+          <div class="dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <span class="window-title">LIVE_TRACKING :: LUMAJANG</span>
+        </div>
+
+        <div class="window-body map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63226.56381665671!2d113.18047963124999!3d-8.130983350000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd667a4e6015571%3A0x4027a76e3532730!2sLumajang%2C%20Lumajang%20Regency%2C%20East%20Java!5e0!3m2!1sen!2sid!4v1715690000000!5m2!1sen!2sid"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          >
+          </iframe>
+
+          <div class="map-overlay"><span class="blink">●</span> ONLINE</div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="diagonal-footer">
+      © 2025 Brianda Wisnu Yusena. Crafted Uniquely.
+    </footer>
+
+    <script src="script.js"></script>
+    <div id="scrollToTop" class="scroll-to-top">
+      <span class="arrow-up">↑</span>
+    </div>
+  </body>
+</html>
