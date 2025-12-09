@@ -174,26 +174,6 @@ document.addEventListener("DOMContentLoaded", () => {
     setInterval(updateTime, 1000);
     updateTime();
   }
-  // Fungsi untuk mengirim perintah ke dalam Iframe Game
-function kirimPerintah(tombol) {
-    const iframeGame = document.querySelector('.game-iframe');
-    
-    // Kita kirim pesan 'postMessage' ke jendela di dalam iframe
-    // Format datanya bebas, di sini kita pakai object { key: ... }
-    if (iframeGame && iframeGame.contentWindow) {
-        iframeGame.contentWindow.postMessage({ key: tombol }, '*');
-    }
-}
-
-// Update Event Listener untuk tombol Gameboy agar memanggil fungsi di atas
-document.addEventListener('DOMContentLoaded', () => {
-    // Mapping tombol fisik HTML ke perintah
-    document.querySelector('.gb-btn.up').onclick = () => kirimPerintah('ArrowUp');
-    document.querySelector('.gb-btn.down').onclick = () => kirimPerintah('ArrowDown');
-    document.querySelector('.gb-btn.left').onclick = () => kirimPerintah('ArrowLeft');
-    document.querySelector('.gb-btn.right').onclick = () => kirimPerintah('ArrowRight');
-    
-    // Tambahan untuk tombol A/B/Start jika game mendukung
-    document.querySelector('.btn-a').onclick = () => kirimPerintah('Enter'); // Contoh A jadi Enter
 });
+
 
