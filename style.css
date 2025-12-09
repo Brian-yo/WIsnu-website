@@ -658,6 +658,89 @@ body {
 /* =========================================
    9.5 GAME SECTION (PLAYGROUND)
    ========================================= */
+/* Container Utama */
+.gb-controller {
+    background-color: #c0c0c0; /* Abu-abu klasik */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 400px; /* Batas lebar di HP */
+    margin: 0 auto;   /* Tengah */
+    border-radius: 0 0 10px 10px;
+    box-sizing: border-box;
+    touch-action: manipulation; /* Anti-zoom saat tap cepat */
+    user-select: none; /* Teks tidak terblok saat main */
+}
+
+/* --- D-PAD (Grid System 3x3) --- */
+.gb-dpad {
+    display: grid;
+    grid-template-columns: 35px 35px 35px;
+    grid-template-rows: 35px 35px 35px;
+}
+
+.gb-btn {
+    background: #222;
+    border: none;
+    color: #444;
+}
+
+.gb-btn:active { background: #000; } /* Efek tekan */
+
+/* Posisi D-PAD */
+.gb-btn.up    { grid-column: 2; grid-row: 1; border-radius: 4px 4px 0 0; }
+.gb-btn.left  { grid-column: 1; grid-row: 2; border-radius: 4px 0 0 4px; }
+.gb-dpad-center { grid-column: 2; grid-row: 2; background: #222; }
+.gb-btn.right { grid-column: 3; grid-row: 2; border-radius: 0 4px 4px 0; }
+.gb-btn.down  { grid-column: 2; grid-row: 3; border-radius: 0 0 4px 4px; }
+
+/* --- Tombol Tengah (Select/Start) --- */
+.gb-middle {
+    display: flex;
+    gap: 8px;
+    margin-top: 40px; /* Turun sedikit ke bawah */
+}
+
+.gb-pill {
+    width: 40px;
+    height: 12px;
+    background: #666;
+    border: 1px solid #333;
+    border-radius: 10px;
+    transform: rotate(-25deg); /* Miring klasik */
+    font-size: 0; /* Sembunyikan teks biar rapi */
+}
+
+.gb-pill:active { background: #333; }
+
+/* --- Tombol Aksi (A/B) --- */
+.gb-action-group {
+    display: flex;
+    gap: 12px;
+    transform: rotate(-15deg); /* Group miring sedikit */
+    margin-top: 15px;
+}
+
+.gb-round {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #8b1d36; /* Merah maroon */
+    color: rgba(0,0,0,0.4);
+    font-weight: bold;
+    font-family: sans-serif;
+    border: none;
+    box-shadow: 2px 3px 0 #460e1b; /* Efek timbul */
+}
+
+.gb-round:active {
+    transform: translate(2px, 3px); /* Efek membal */
+    box-shadow: none;
+}
+.btn-b { margin-top: 15px; } /* Tombol B lebih rendah */
+
 .game-section {
   padding: 150px 5vw;
   background-color: #050505; /* Mengikuti tema gelap Projects */
@@ -1235,4 +1318,5 @@ iframe {
     }
   }
 }
+
 
