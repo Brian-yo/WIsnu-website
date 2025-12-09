@@ -1316,7 +1316,16 @@ iframe {
       width: 45px;
       height: 45px;
     }
+     /* Tambahan agar responsif di layar HP kecil */
+@media (max-width: 400px) {
+  .gb-controller {
+    transform: scale(0.85); /* Mengecilkan kontroler sedikit agar muat */
+    padding: 10px;
+    width: 100%;
   }
 }
+  }
+}
+
 
 
