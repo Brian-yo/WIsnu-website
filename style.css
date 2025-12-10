@@ -1066,65 +1066,7 @@ iframe {
     transform: translateY(-3px); /* Panah bergerak naik sedikit */
   }
 
-  /* Responsif untuk HP */
- /* =========================================
-     PERBAIKAN: MOBILE MENU SIDEBAR (KANAN)
-     ========================================= */
-  
-  /* Pastikan hamburger ada di layer paling atas supaya bisa diklik untuk menutup */
-  .hamburger {
-    display: flex;
-    z-index: 1001; 
-    position: relative; 
-  }
-
-  /* Style Menu Sidebar */
-  .nav-links {
-    /* Gunakan Fixed agar menutupi layar dari atas sampai bawah */
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh; /* Tinggi penuh */
-    width: 70%;    /* Lebar menu 70% dari layar (bisa diatur) */
-    max-width: 300px; /* Batas maksimal lebar */
-    
-    background: rgba(255, 255, 255, 0.95); /* Background putih agak transparan */
-    backdrop-filter: blur(15px); /* Efek blur di belakang menu */
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; /* Menu rata tengah vertikal */
-    gap: 40px; /* Jarak antar menu */
-    
-    /* Efek Animasi Geser */
-    transform: translateX(100%); /* Sembunyikan ke kanan layar */
-    transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
-    
-    /* Kosmetik tambahan */
-    box-shadow: -10px 0 30px rgba(0,0,0,0.1); /* Bayangan di kiri */
-    border-left: 1px solid rgba(0,0,0,0.1);
-    border-radius: 20px 0 0 20px; /* Sudut kiri membulat */
-    z-index: 1000;
-    
-    /* Reset style lama */
-    padding: 0;
-    border-bottom: none;
-  }
-
-  /* Style Teks Menu di Mobile */
-  .nav-links li a {
-    color: #000;
-    font-size: 1.2rem; /* Ukuran font lebih besar di HP */
-    font-weight: 700;
-  }
-
-  /* Class Active (Ditambah via JS saat hamburger diklik) */
-  .nav-links.nav-active {
-    display: flex;
-    transform: translateX(0); /* Geser masuk ke layar */
-    animation: none; /* Matikan animasi slideDown yang lama */
-  }
+ @media (max-width: 768px) {<br> .scroll-to-top {<br> right: 20px;<br> width: 45px;<br> height: 45px;<br> }<br> /* Tambahan agar responsif di layar HP kecil */<br>@media (max-width: 400px) {<br> .gb-controller {<br> transform: scale(0.85); /* Mengecilkan kontroler sedikit agar muat */<br> padding: 10px;<br> width: 100%;<br> }<br>}<br> }<br>}<br><br><br><br><br><br><br><br id="textarea-placeholder-break"></div>
 
   /* Hapus keyframes slideDown lama jika tidak dipakai lagi */
   }
