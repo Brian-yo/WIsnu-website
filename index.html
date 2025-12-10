@@ -387,6 +387,15 @@
             />
             <label for="nama">Nama Lengkap</label>
           </div>
+           <div class="form-group floating-label">
+            <textarea
+              id="pesan"
+              required
+              placeholder=" "
+              class="hover-target"
+            ></textarea>
+            <label for="pesan">Status Pelajar/Jabatan</label>
+          </div>
           <div class="form-group floating-label">
             <input
               type="email"
@@ -395,24 +404,12 @@
               placeholder=" "
               class="hover-target"
             />
-            <label for="email">Alamat Email</label>
+            <label for="email">Status</label>
           </div>
-          <div class="form-group floating-label">
-            <textarea
-              id="pesan"
-              rows="4"
-              required
-              placeholder=" "
-              class="hover-target"
-            ></textarea>
-            <label for="pesan">Ceritakan proyek Anda</label>
-          </div>
-          <button
-            type="button"
-            class="btn-glitch hover-target"
-            onclick="alert('Pesan Terkirim!')"
-          >
-            KIRIM PESAN ->
+         
+         <button type="button" id="btnKirim" class="btn-glitch hover-target">
+  KIRIM PESAN ->
+</button>
           </button>
         </form>
       </div>
@@ -440,7 +437,40 @@
         </div>
       </div>
     </section>
+<section id="playground" class="game-section">
+      <div class="game-wrapper">
+        <h2 class="massive-title small" style="text-align: center; margin-bottom: 20px;">
+          CYBER SNAKE
+        </h2>
+        
+        <div class="score-board">SCORE: <span id="score">0</span></div>
+        
+        <canvas id="gameCanvas" width="300" height="300"></canvas>
+        
+        <button id="startBtn" class="btn-glitch" style="margin: 20px auto; display:block;">
+          START_GAME.EXE
+        </button>
 
+        <div class="pc-controls-hint">
+          <div class="key-row">
+            <div class="key">▲</div>
+          </div>
+          <div class="key-row">
+            <div class="key">◀</div>
+            <div class="key">▼</div>
+            <div class="key">▶</div>
+          </div>
+          <p>USE KEYBOARD TO MOVE</p>
+        </div>
+
+        <div class="d-pad">
+          <button class="pad-btn up" id="upBtn">▲</button>
+          <button class="pad-btn left" id="leftBtn">◀</button>
+          <button class="pad-btn right" id="rightBtn">▶</button>
+          <button class="pad-btn down" id="downBtn">▼</button>
+        </div>
+      </div>
+    </section>
     <footer class="diagonal-footer">
       © 2025 Brianda Wisnu Yusena. Crafted Uniquely.
     </footer>
@@ -451,7 +481,6 @@
     </div>
   </body>
 </html>
-
 
 
 
