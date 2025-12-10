@@ -1,16 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  /* =========================================
-     1. PRELOADER
-     ========================================= */
-  const preloader = document.querySelector(".preloader");
-
-  window.addEventListener("load", () => {
-    // Hilangkan preloader saat halaman selesai dimuat
-    preloader.style.opacity = "0";
-    setTimeout(() => {
-      preloader.style.display = "none";
-    }, 500);
-  });
 
   /* =========================================
      2. CUSTOM CURSOR
@@ -176,6 +164,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
  
 });
+
 
 
 
