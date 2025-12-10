@@ -1066,13 +1066,145 @@ iframe {
     transform: translateY(-3px); /* Panah bergerak naik sedikit */
   }
 
- @media (max-width: 768px) {<br> .scroll-to-top {<br> right: 20px;<br> width: 45px;<br> height: 45px;<br> }<br> /* Tambahan agar responsif di layar HP kecil */<br>@media (max-width: 400px) {<br> .gb-controller {<br> transform: scale(0.85); /* Mengecilkan kontroler sedikit agar muat */<br> padding: 10px;<br> width: 100%;<br> }<br>}<br> }<br>}<br><br><br><br><br><br><br><br id="textarea-placeholder-break"></div>
+ @media (max-width: 768px) {
+  .massive-title {
+    font-size: 3rem;
+  }
+  .navbar {
+    padding: 15px 20px;
+    width: 75%;
+   
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* SIDEBAR MENU MOBILE (Fix Terbaru) */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 70%;       /* Lebar sidebar */
+    max-width: 300px; /* Batas lebar maksimal */
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(15px);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    
+    /* Animasi Sidebar */
+    transform: translateX(100%); /* Sembunyi ke kanan */
+    transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+    
+    box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+    border-left: 1px solid rgba(0,0,0,0.1);
+    border-radius: 20px 0 0 20px;
+    z-index: 1000;
+    
+    /* Reset style */
+    padding: 0;
+    border-bottom: none;
+  }
+
+  .nav-links li a {
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  .nav-links.nav-active {
+    display: flex;
+    transform: translateX(0); /* Muncul */
+    animation: none;
+  }
+
+  /* Hero Adjustments */
+  .hero-container {
+    text-align: center;
+  }
+  .hero-content-layer {
+    margin-top: 30px;
+  }
+  .hero-subtitle {
+    margin: 0 auto 30px auto;
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  /* About Adjustments */
+  .about-content-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+  .image-frame {
+    height: 350px;
+  }
+  .experience-badge {
+    padding: 15px 20px;
+    right: 0;
+    bottom: -20px;
+  }
+  .experience-badge .years {
+    font-size: 2.5rem;
+  }
+
+  /* Projects Adjustments */
+  .horizontal-scroll-container {
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 20px;
+    padding-right: 20px;
+  }
+  .project-item {
+    min-width: 85vw;
+  }
+
+  /* Blog Adjustments */
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+  .blog-header {
+    justify-content: flex-start;
+  }
+
+  /* Contact Adjustments */
+  .diagonal-contact {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .contact-container-layer,
+  .tech-window {
+    width: 100%;
+  }
+
+  /* Scroll To Top Adjustments */
+  .scroll-to-top {
+    right: 20px;
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* --- Small Mobile (Max 400px) --- */
+@media (max-width: 400px) {
+  .gb-controller {
+    transform: scale(0.85);
+    padding: 10px;
+    width: 100%;
+  }
+}
 
   /* Hapus keyframes slideDown lama jika tidak dipakai lagi */
   }
 }
   }
 }
+
 
 
 
