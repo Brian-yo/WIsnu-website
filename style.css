@@ -337,7 +337,7 @@ body {
   white-space: nowrap;
   position: relative;
   z-index: 5;
-  transform: rotate(-2deg) scale(1.05);
+  transform: rotate(-0.2deg) scale(1.05);
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   transition: 0.3s;
@@ -622,71 +622,68 @@ body {
 }
 
 /* =========================================
-   9. DATASHEET (CYBER TECH STYLE)
-   ========================================= */
-/* =========================================
-   9. DATASHEET STYLE (Dark Mode)
+   9. DATASHEET (OLD STYLE - DARK SOLID)
    ========================================= */
 
-/* Container Utama - Biar responsif di HP */
+/* Container Utama */
 .datasheet-container {
-    margin: 40px auto;
-    width: 90%;
-    max-width: 1000px;
-    background: #111; /* Latar belakang gelap */
-    border: 1px solid #333; /* Border tipis */
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    overflow-x: auto; /* Wajib: Biar tabel bisa digeser di HP */
+  margin: 40px auto;
+  width: 90%;
+  max-width: 1000px;
+  background: #111; /* Latar belakang Hitam Pekat */
+  border: 1px solid #333; /* Border tipis */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  overflow-x: auto; /* Wajib: Biar tabel bisa digeser di HP */
 }
 
-/* Judul Tabel */
+/* Judul Tabel (Dengan garis putih di kiri) */
 .datasheet-container h2 {
-    font-size: 1.5rem;
-    color: #fff;
-    margin-bottom: 20px;
-    font-weight: 700;
-    border-left: 5px solid #fff; /* Aksen garis putih di kiri */
-    padding-left: 15px;
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 20px;
+  font-weight: 700;
+  border-left: 5px solid #fff; /* Aksen garis putih vertikal */
+  padding-left: 15px;
 }
 
 /* Tabelnya */
 .content-table {
-    width: 100%;
-    border-collapse: collapse;
-    min-width: 600px; /* Supaya tabel tidak gepeng di layar kecil */
-    font-size: 0.95rem;
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px; /* Supaya tabel tidak gepeng di layar kecil */
+  font-size: 0.95rem;
 }
 
 /* Bagian Kepala Tabel (Header) */
 .content-table thead tr {
-    background-color: #222;
-    color: #fff;
-    text-align: left;
-    font-weight: bold;
+  background-color: #222; /* Header abu gelap */
+  color: #fff;
+  text-align: left;
+  font-weight: bold;
 }
 
-.content-table th, 
+.content-table th,
 .content-table td {
-    padding: 15px 20px;
-    border-bottom: 1px solid #333; /* Garis antar baris */
-    color: #ddd;
+  padding: 15px 20px;
+  border-bottom: 1px solid #333; /* Garis antar baris */
+  color: #ddd;
 }
 
 /* Efek saat mouse diarahkan ke baris (Hover) */
 .content-table tbody tr {
-    transition: 0.3s;
+  transition: 0.3s;
 }
 
 .content-table tbody tr:hover {
-    background-color: #1a1a1a;
-    color: #fff;
+  background-color: #1a1a1a;
+  color: #fff;
 }
 
-/* Garis paling bawah */
+/* Garis paling bawah (Garis putih tebal) */
 .content-table tbody tr:last-of-type {
-    border-bottom: 2px solid #fff; /* Garis penutup tebal putih */
+  border-bottom: 2px solid #fff;
 }
 /* =========================================
    10. CONTACT SECTION
@@ -893,7 +890,8 @@ iframe {
   }
   .navbar {
     padding: 15px 20px;
-    width: 95%;
+    width: 60%;
+    right: 20px;
   }
   .nav-links {
     display: none;
@@ -1032,151 +1030,394 @@ iframe {
     transform: translateY(-3px); /* Panah bergerak naik sedikit */
   }
 
- @media (max-width: 768px) {
-  .massive-title {
-    font-size: 3rem;
-  }
-  .navbar {
-    padding: 15px 20px;
-    width: 75%;
-   
+  @media (max-width: 768px) {
+    .massive-title {
+      font-size: 3rem;
+    }
+    .navbar {
+      padding: 15px 20px;
+      width: 75%;
+    }
+
+    .hamburger {
+      display: flex;
+    }
+
+    /* SIDEBAR MENU MOBILE (Fix Terbaru) */
+    .nav-links {
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100vh;
+      width: 70%; /* Lebar sidebar */
+      max-width: 300px; /* Batas lebar maksimal */
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(15px);
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+
+      /* Animasi Sidebar */
+      transform: translateX(100%); /* Sembunyi ke kanan */
+      transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+
+      box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+      border-left: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 20px 0 0 20px;
+      z-index: 1000;
+
+      /* Reset style */
+      padding: 0;
+      border-bottom: none;
+    }
+
+    .nav-links li a {
+      color: #000;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .nav-links.nav-active {
+      display: flex;
+      transform: translateX(0); /* Muncul */
+      animation: none;
+    }
+
+    /* Hero Adjustments */
+    .hero-container {
+      text-align: center;
+    }
+    .hero-content-layer {
+      margin-top: 30px;
+    }
+    .hero-subtitle {
+      margin: 0 auto 30px auto;
+      max-width: 100%;
+      padding: 0 20px;
+    }
+
+    /* About Adjustments */
+    .about-content-grid {
+      grid-template-columns: 1fr;
+      gap: 60px;
+    }
+    .image-frame {
+      height: 350px;
+    }
+    .experience-badge {
+      padding: 15px 20px;
+      right: 0;
+      bottom: -20px;
+    }
+    .experience-badge .years {
+      font-size: 2.5rem;
+    }
+
+    /* Projects Adjustments */
+    .horizontal-scroll-container {
+      flex-direction: row;
+      overflow-x: auto;
+      gap: 20px;
+      padding-right: 20px;
+    }
+    .project-item {
+      min-width: 85vw;
+    }
+
+    /* Blog Adjustments */
+    .blog-grid {
+      grid-template-columns: 1fr;
+    }
+    .blog-header {
+      justify-content: flex-start;
+    }
+
+    /* Contact Adjustments */
+    .diagonal-contact {
+      flex-direction: column;
+      gap: 50px;
+    }
+    .contact-container-layer,
+    .tech-window {
+      width: 100%;
+    }
+
+    /* Scroll To Top Adjustments */
+    .scroll-to-top {
+      right: 20px;
+      width: 45px;
+      height: 45px;
+    }
   }
 
-  .hamburger {
+  /* --- Small Mobile (Max 400px) --- */
+  @media (max-width: 400px) {
+    .gb-controller {
+      transform: scale(0.85);
+      padding: 10px;
+      width: 100%;
+    }
+  }
+  /* =========================================
+   14. GAME SECTION (DATASHEET STYLE)
+   ========================================= */
+
+  .game-section {
+    padding: 60px 5vw;
+    /* Background luar transparan agar menyatu dengan body, 
+     karena kotaknya nanti yang berwarna hitam */
+    background: transparent;
     display: flex;
+    justify-content: center;
   }
 
-  /* SIDEBAR MENU MOBILE (Fix Terbaru) */
-  .nav-links {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 70%;       /* Lebar sidebar */
-    max-width: 300px; /* Batas lebar maksimal */
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(15px);
-    
+  /* KOTAK UTAMA (Copy Paste style dari .datasheet-container) */
+  .game-wrapper {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1000px; /* Lebar disamakan dengan datasheet */
+
+    background: #111; /* Hitam Pekat */
+    border: 1px solid #333; /* Border tipis */
+    border-radius: 10px;
+
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+
+    text-align: center; /* Rata Tengah */
+    position: center;
+    z-index: 2;
+  }
+
+  /* JUDUL GAME (Copy Paste style dari h2 datasheet) */
+  .game-wrapper h2 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 30px;
+    font-weight: 700;
+
+    /* Garis bawah putih */
+    display: inline-block;
+    border-bottom: 3px solid #fff;
+    padding-bottom: 10px;
+  }
+
+  /* SCORE BOARD */
+  .score-board {
+    font-family: "Space Grotesk", monospace;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #ddd; /* Warna abu terang biar clean */
+    font-weight: bold;
+  }
+
+  /* CANVAS GAME */
+  #gameCanvas {
+    background: #000;
+    border: 1px solid #333; /* Border disamakan dengan garis tabel */
+    display: block;
+    margin: 0 auto;
+
+    /* Agar responsif */
+    max-width: 100%;
+  }
+
+  /* TOMBOL START */
+  #startBtn {
+    margin: 30px auto;
+    display: block;
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+  }
+  #startBtn:hover {
+    background: #fff;
+    color: #000;
+  }
+
+  /* --- TAMPILAN PC (Keyboard Hint) --- */
+  .pc-controls-hint {
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 40px;
-    
-    /* Animasi Sidebar */
-    transform: translateX(100%); /* Sembunyi ke kanan */
-    transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
-    
-    box-shadow: -10px 0 30px rgba(0,0,0,0.1);
-    border-left: 1px solid rgba(0,0,0,0.1);
-    border-radius: 20px 0 0 20px;
-    z-index: 1000;
-    
-    /* Reset style */
-    padding: 0;
-    border-bottom: none;
+    gap: 5px;
+    opacity: 0.5; /* Agak redup biar tidak ganggu */
   }
 
-  .nav-links li a {
-    color: #000;
-    font-size: 1.2rem;
-    font-weight: 700;
-  }
-
-  .nav-links.nav-active {
+  .key-row {
     display: flex;
-    transform: translateX(0); /* Muncul */
-    animation: none;
+    gap: 5px;
   }
 
-  /* Hero Adjustments */
-  .hero-container {
-    text-align: center;
-  }
-  .hero-content-layer {
-    margin-top: 30px;
-  }
-  .hero-subtitle {
-    margin: 0 auto 30px auto;
-    max-width: 100%;
-    padding: 0 20px;
-  }
-
-  /* About Adjustments */
-  .about-content-grid {
-    grid-template-columns: 1fr;
-    gap: 60px;
-  }
-  .image-frame {
-    height: 350px;
-  }
-  .experience-badge {
-    padding: 15px 20px;
-    right: 0;
-    bottom: -20px;
-  }
-  .experience-badge .years {
-    font-size: 2.5rem;
+  .key {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #444; /* Warna border lebih kalem */
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+    font-size: 0.9rem;
   }
 
-  /* Projects Adjustments */
-  .horizontal-scroll-container {
+  .pc-controls-hint p {
+    margin-top: 10px;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    color: #666;
+  }
+
+  /* --- TAMPILAN HP (D-PAD) --- */
+  .d-pad {
+    display: none; /* Default sembunyi di PC */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 180px;
+    margin: 30px auto 0 auto;
+  }
+
+  .pad-btn {
+    background: #222; /* Latar tombol gelap */
+    border: 1px solid #444;
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    touch-action: manipulation;
+    transition: 0.1s;
+  }
+
+  .pad-btn:active {
+    background: #fff; /* Putih saat ditekan */
+    color: #000;
+    border-color: #fff;
+    transform: scale(0.95);
+  }
+
+  /* Posisi Tombol */
+  .up {
+    grid-column: 2;
+  }
+  .left {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .right {
+    grid-column: 3;
+    grid-row: 2;
+  }
+  .down {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  /* =========================================
+   MEDIA QUERY: HANYA UNTUK HP
+   ========================================= */
+  /* =========================================
+     PERBAIKAN: MOBILE MENU COMPACT (GRID/SAMPING)
+     ========================================= */
+
+  /* Container Menu Dropdown */
+  /* =========================================
+     PERBAIKAN: MOBILE MENU COMPACT (FULL WIDTH FIX)
+     ========================================= */
+
+  /* Container Menu Dropdown */
+  .nav-links {
+    position: absolute;
+    top: 85px; /* Jarak dari atas */
+
+    /* FIX UTAMA: Kompensasi Padding Navbar Induk */
+    /* Karena navbar punya padding kiri-kanan 20px, kita harus menarik dropdownnya keluar */
+    left: -20px;
+    width: calc(
+      100% + 40px
+    ); /* Lebar 100% ditambah total padding kiri+kanan (20+20) */
+
+    height: auto;
+
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 20px 10px; /* Padding internal menu */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    /* Tampilan Berdampingan (Grid) */
+    display: flex;
     flex-direction: row;
-    overflow-x: auto;
-    gap: 20px;
-    padding-right: 20px;
-  }
-  .project-item {
-    min-width: 85vw;
-  }
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
 
-  /* Blog Adjustments */
-  .blog-grid {
-    grid-template-columns: 1fr;
-  }
-  .blog-header {
-    justify-content: flex-start;
-  }
-
-  /* Contact Adjustments */
-  .diagonal-contact {
-    flex-direction: column;
-    gap: 50px;
-  }
-  .contact-container-layer,
-  .tech-window {
-    width: 100%;
-  }
-
-  /* Scroll To Top Adjustments */
-  .scroll-to-top {
-    right: 20px;
-    width: 45px;
-    height: 45px;
+    /* Animasi Awal (Sembunyi) */
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    z-index: 998; /* Pastikan di bawah hamburger */
   }
 }
 
-/* --- Small Mobile (Max 400px) --- */
-@media (max-width: 400px) {
-  .gb-controller {
-    transform: scale(0.85);
-    padding: 10px;
-    width: 100%;
-  }
+/* Saat Menu Aktif (Muncul) */
+.nav-links.nav-active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: all;
 }
 
-  /* Hapus keyframes slideDown lama jika tidak dipakai lagi */
+/* Styling Teks Menu Mobile */
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links li a {
+  display: inline-block;
+  color: #000;
+  font-size: 0.85rem; /* Font agak kecil biar muat */
+  font-weight: 700;
+  padding: 8px 15px;
+  background: #f0f0f0; /* Background abu tipis per tombol */
+  border-radius: 50px;
+  border: 1px solid #ddd;
+  transition: 0.2s;
+}
+
+/* Efek saat tombol menu ditekan */
+.nav-links li a:active {
+  background: #000;
+  color: #fff;
+  transform: scale(0.95);
+}
+
+/* =========================================
+   MEDIA QUERY: HANYA UNTUK HP / TABLET
+   ========================================= */
+@media (max-width: 768px) {
+  /* Sembunyikan Petunjuk Keyboard PC */
+  .pc-controls-hint {
+    display: none;
+  }
+
+  /* Munculkan Tombol D-Pad HP */
+  .d-pad {
+    display: grid;
+  }
+
+  /* Canvas sedikit mengecil biar muat */
+  #gameCanvas {
+    width: 90vw; /* Lebar mengikuti layar HP */
+    height: 90vw;
+    max-width: 300px;
+    max-height: 300px;
   }
 }
-  }
-}
-
-
-
-
-
-
-
-
-
-
+/* Hapus keyframes slideDown lama jika tidak dipakai lagi */
